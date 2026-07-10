@@ -1,15 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
+
 :root {
-  --bg: #fffaf2;
+  --bg: #fff8ed;
   --surface: #ffffff;
-  --surface-warm: #fff3df;
-  --ink: #25332d;
-  --muted: #627168;
-  --green: #2f7d55;
-  --green-dark: #1f5f42;
-  --red: #cc2f2b;
-  --gold: #d99d32;
-  --line: #eadfcf;
-  --shadow: 0 22px 60px rgba(55, 43, 28, 0.13);
+  --surface-warm: #fff0da;
+  --ink: #1f2d29;
+  --muted: #61716a;
+  --green: #167650;
+  --green-dark: #0e5239;
+  --leaf: #e9f6ec;
+  --red: #d8312a;
+  --gold: #f0aa2f;
+  --blue: #245b8f;
+  --line: #eadbc7;
+  --shadow: 0 22px 60px rgba(64, 45, 20, 0.14);
 }
 
 * {
@@ -24,9 +28,10 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 10% 10%, rgba(47, 125, 85, 0.1), transparent 32rem),
-    linear-gradient(180deg, #fffdf8 0%, var(--bg) 46%, #fff 100%);
-  font-family: "Noto Sans", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif;
+    radial-gradient(circle at 10% 5%, rgba(22, 118, 80, 0.12), transparent 30rem),
+    radial-gradient(circle at 90% 20%, rgba(240, 170, 47, 0.14), transparent 24rem),
+    linear-gradient(180deg, #fffdf8 0%, var(--bg) 48%, #ffffff 100%);
+  font-family: "Hind", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
 }
 
@@ -48,7 +53,7 @@ a {
   justify-content: space-between;
   gap: 1.5rem;
   padding: 0.85rem clamp(1rem, 5vw, 4rem);
-  background: rgba(255, 250, 242, 0.88);
+  background: rgba(255, 248, 237, 0.9);
   border-bottom: 1px solid rgba(234, 223, 207, 0.82);
   backdrop-filter: blur(18px);
 }
@@ -76,7 +81,8 @@ a {
 }
 
 .brand strong {
-  color: var(--red);
+  color: var(--green-dark);
+  font-family: "Plus Jakarta Sans", "Hind", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.04em;
 }
@@ -140,20 +146,25 @@ h1 {
   max-width: 13ch;
   margin-bottom: 1.2rem;
   color: #17241f;
-  font-size: clamp(3.2rem, 9vw, 6.6rem);
+  font-family: "Plus Jakarta Sans", "Hind", sans-serif;
+  font-size: clamp(3rem, 8vw, 6.1rem);
+  font-weight: 800;
   line-height: 0.95;
   letter-spacing: 0;
 }
 
 h2 {
   margin-bottom: 1rem;
+  font-family: "Plus Jakarta Sans", "Hind", sans-serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
   line-height: 1.05;
   letter-spacing: 0;
 }
 
 h3 {
   margin-bottom: 0.55rem;
+  font-family: "Plus Jakarta Sans", "Hind", sans-serif;
   font-size: 1.18rem;
 }
 
@@ -183,7 +194,7 @@ h3 {
 }
 
 .button.primary {
-  background: var(--green);
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
   color: #fff;
   box-shadow: 0 14px 28px rgba(47, 125, 85, 0.24);
 }
@@ -191,7 +202,7 @@ h3 {
 .button.secondary {
   background: #fff;
   border-color: var(--line);
-  color: var(--green-dark);
+  color: var(--blue);
 }
 
 .hero-panel {
@@ -201,8 +212,8 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 2rem;
   background:
-    linear-gradient(140deg, rgba(255, 255, 255, 0.78), rgba(255, 243, 223, 0.9)),
-    linear-gradient(45deg, rgba(47, 125, 85, 0.08), transparent);
+    linear-gradient(140deg, rgba(255, 255, 255, 0.84), rgba(255, 240, 218, 0.92)),
+    linear-gradient(45deg, rgba(22, 118, 80, 0.1), transparent);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -231,9 +242,11 @@ h3 {
 .photo-stack img {
   width: 100%;
   height: 100%;
+  padding: 0.45rem;
   border: 7px solid #fff;
   border-radius: 1.2rem;
-  object-fit: cover;
+  background: #fff;
+  object-fit: contain;
   box-shadow: 0 18px 34px rgba(55, 43, 28, 0.16);
 }
 
@@ -270,7 +283,8 @@ h3 {
 .impact-strip strong {
   display: block;
   margin-bottom: 0.28rem;
-  color: var(--red);
+  color: var(--green-dark);
+  font-family: "Plus Jakarta Sans", "Hind", sans-serif;
   font-size: 1.02rem;
 }
 
@@ -321,15 +335,14 @@ h3 {
   padding: 1.35rem;
   border: 1px solid var(--line);
   border-radius: 1rem;
-  background:
-    linear-gradient(180deg, #fff 0%, #fffaf2 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fff8ed 100%);
   box-shadow: 0 12px 30px rgba(55, 43, 28, 0.06);
 }
 
 .program-grid span {
   display: inline-flex;
   margin-bottom: 1.2rem;
-  color: var(--gold);
+  color: var(--red);
   font-size: 0.9rem;
   font-weight: 900;
 }
@@ -345,7 +358,8 @@ h3 {
   grid-template-columns: minmax(0, 0.95fr) minmax(18rem, 1.05fr);
   gap: 1rem;
   align-items: stretch;
-  background: var(--surface-warm);
+  background:
+    linear-gradient(135deg, rgba(233, 246, 236, 0.9), rgba(255, 240, 218, 0.92));
 }
 
 .shg-card,
@@ -393,32 +407,36 @@ h3 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-flow: dense;
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
 }
 
 figure {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 18rem;
   margin: 0;
   border-radius: 1rem;
-  background: #eee5da;
+  border: 1px solid var(--line);
+  background: #fff;
   overflow: hidden;
-  box-shadow: 0 16px 38px rgba(55, 43, 28, 0.12);
+  box-shadow: 0 16px 38px rgba(55, 43, 28, 0.1);
 }
 
 figure.wide {
-  grid-column: span 2;
-  grid-row: span 2;
+  grid-column: span 1;
+  grid-row: span 1;
 }
 
 figure img {
   width: 100%;
-  height: 100%;
-  min-height: 18rem;
-  object-fit: cover;
+  height: 22rem;
+  padding: 0.75rem;
+  object-fit: contain;
   object-position: center;
+  background:
+    linear-gradient(45deg, rgba(22, 118, 80, 0.05), rgba(240, 170, 47, 0.08)),
+    #fffaf3;
   filter: saturate(1.06) contrast(1.04);
   transition: transform 220ms ease, filter 220ms ease;
 }
@@ -429,18 +447,13 @@ figure:hover img {
 }
 
 figcaption {
-  position: absolute;
-  right: 0.75rem;
-  bottom: 0.75rem;
-  left: 0.75rem;
-  padding: 0.65rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 0.7rem;
-  background: rgba(23, 36, 31, 0.74);
-  color: #fff;
-  font-size: 0.88rem;
+  min-height: 4.4rem;
+  padding: 0.85rem 1rem 1rem;
+  border-top: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.94rem;
   font-weight: 800;
-  backdrop-filter: blur(12px);
 }
 
 .contact-section {
@@ -452,8 +465,8 @@ figcaption {
   padding: clamp(1.5rem, 4vw, 2.4rem);
   border-radius: 1.5rem;
   background:
-    linear-gradient(135deg, rgba(47, 125, 85, 0.95), rgba(31, 95, 66, 0.95)),
-    #2f7d55;
+    linear-gradient(135deg, rgba(14, 82, 57, 0.97), rgba(36, 91, 143, 0.94)),
+    var(--green-dark);
   color: #fff;
 }
 
@@ -567,8 +580,7 @@ footer {
     grid-row: auto;
   }
 
-  figure,
   figure img {
-    min-height: 17rem;
+    height: 19rem;
   }
 }
